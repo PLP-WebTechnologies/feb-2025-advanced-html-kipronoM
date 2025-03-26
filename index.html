@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #00796b;
+            color: white;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        form input, form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #004d40;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Web Development</h1>
+        <p>Assignment week 2</p>
+    </header>
+
+    <main>
+        <!-- Learning Tracks -->
+        <section>
+            <h2>Our IT Learning Tracks</h2>
+            <ol type="i">
+                <li>Software Development</li>
+                <li>Cybersecurity</li>
+                <li>Cloud Computing</li>
+                <li>Data Science</li>
+                <li>Network Administration</li>
+            </ol>
+        </section>
+
+        <!-- Campus Image -->
+        <section>
+            <h2>Sample pexel Image</h2>
+            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                 alt="Modern Tech Learning Environment" 
+                 width="100%" 
+                 height="auto">
+        </section>
+
+        <!-- Key Contacts -->
+        <section>
+            <h2>Admissions Contact Directory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Amina Okonkwo</td>
+                        <td>Director of Admissions</td>
+                        <td>+234 (0) 802 345 6789</td>
+                        <td>a.okonkwo@africaschoolofIT.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Kasongo Yeye</td>
+                        <td>Accounts and Finance</td>
+                        <td>+254 (0) 71 234 5678</td>
+                        <td>kasongo@africaschoolofIT.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Fatima Diallo</td>
+                        <td>International Admissions</td>
+                        <td>+221 (0) 77 890 1234</td>
+                        <td>f.diallo@africaschoolofIT.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Emmanuel Kiptoo</td>
+                        <td>Career Services</td>
+                        <td>+254 (0) 702 345 6789</td>
+                        <td>e.kiptoo@africaschoolofIT.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Kwame Mensah</td>
+                        <td>Alumni Relations</td>
+                        <td>+233 (0) 50 234 5678</td>
+                        <td>k.mensah@africaschoolofIT.edu</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Student Registration Form -->
+        <section>
+            <h2>Student Application Form</h2>
+            <form id="studentRegistration" action="#" method="post">
+                <!-- Personal Information -->
+                <label for="fullName">Full Name *</label>
+                <input type="text" 
+                       id="fullName" 
+                       name="fullName" 
+                       placeholder="Enter your full name" 
+                       required 
+                       minlength="2" 
+                       maxlength="50">
+
+                <!-- Email Field -->
+                <label for="email">Email Address *</label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       placeholder="Enter your student email" 
+                       required 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <!-- Date of Birth -->
+                <label for="dob">Date of Birth *</label>
+                <input type="date" 
+                       id="dob" 
+                       name="dob" 
+                       required>
+
+                <!-- Country Dropdown -->
+                <label for="country">Country of Origin *</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Your Country</option>
+                    <option value="nigeria">Nigeria</option>
+                    <option value="southafrica">South Africa</option>
+                    <option value="kenya">Kenya</option>
+                    <option value="egypt">Egypt</option>
+                    <option value="ghana">Ghana</option>
+                    <option value="other">Other African Country</option>
+                </select>
+
+                <!-- Learning Track Selection -->
+                <label for="learningTrack">Preferred Learning Track *</label>
+                <select id="learningTrack" name="learningTrack" required>
+                    <option value="">Select Your Track</option>
+                    <option value="softdev">Software Development</option>
+                    <option value="cybersec">Cybersecurity</option>
+                    <option value="cloud">Cloud Computing</option>
+                    <option value="datasci">Data Science</option>
+                    <option value="network">Network Administration</option>
+                </select>
+
+                <!-- Education Level -->
+                <fieldset>
+                    <legend>Current Education Level *</legend>
+                    <input type="radio" id="highschool" name="educationLevel" value="highschool" required>
+                    <label for="highschool">High School</label>
+                    <input type="radio" id="undergraduate" name="educationLevel" value="undergraduate">
+                    <label for="undergraduate">Undergraduate</label>
+                    <input type="radio" id="graduate" name="educationLevel" value="graduate">
+                    <label for="graduate">Graduate</label>
+                </fieldset>
+
+                <!-- Areas of Interest -->
+                <fieldset>
+                    <legend>Areas of Technical Interest</legend>
+                    <input type="checkbox" id="ai" name="interests" value="ai">
+                    <label for="ai">Artificial Intelligence</label>
+                    <input type="checkbox" id="webdev" name="interests" value="webdev">
+                    <label for="webdev">Web Development</label>
+                    <input type="checkbox" id="mobileapp" name="interests" value="mobileapp">
+                    <label for="mobileapp">Mobile App Development</label>
+                    <input type="checkbox" id="dataanalysis" name="interests" value="dataanalysis">
+                    <label for="dataanalysis">Data Analysis</label>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Africa School of IT - Nurturing Africa's Tech Talent</p>
+    </footer>
+</body>
+</html>
